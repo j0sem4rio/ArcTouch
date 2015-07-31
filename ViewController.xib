@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="search" destination="5k5-Hl-lTd" id="glz-6j-ufT"/>
+                <outlet property="tableViewStreet" destination="eHE-kE-lCf" id="rhJ-Fk-tCh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="hnC-NL-cM4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5k5-Hl-lTd">
+                    <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2Ed-VI-EQB"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eHE-kE-lCf">
+                    <rect key="frame" x="0.0" y="67" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hca-Pb-zhU"/>
+                        <outlet property="delegate" destination="-1" id="Cqc-mZ-VnD"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eHE-kE-lCf" firstAttribute="top" secondItem="5k5-Hl-lTd" secondAttribute="bottom" id="FFI-vG-uLa"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M7g-eg-qbv"/>
+                <constraint firstAttribute="trailing" secondItem="5k5-Hl-lTd" secondAttribute="trailing" id="NQp-Gm-RaG"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="trailing" secondItem="eHE-kE-lCf" secondAttribute="trailing" id="XXy-4q-3ND"/>
+                <constraint firstAttribute="bottom" secondItem="eHE-kE-lCf" secondAttribute="bottom" constant="-67" id="apZ-fa-7Zy"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="eHE-kE-lCf" secondAttribute="leading" id="icH-hX-ThW"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="jLu-iG-SLZ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

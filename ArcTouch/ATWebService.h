@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPClient.h"
+#import "AFJSONRequestOperation.h"
 
+#import "ATStreet.h"
 
 /* Urls */
 static NSString * const  ROUTE_BY_STOP = @"/v1/queries/findRoutesByStopName/run";
@@ -17,5 +20,7 @@ static NSString * const  DEPARTURES_BY_ROUTE = @"/v1/queries/findDeparturesByRou
 @interface ATWebService : NSObject
 
 + (instancetype)sharedInstance;
+
+- (AFHTTPRequestOperation*)callWebService:(NSString*)path parameter:(NSDictionary*)dic;
 
 @end

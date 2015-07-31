@@ -10,4 +10,11 @@
 
 @implementation ATStreet
 
+
+@synthesize uniqueId;
+@synthesize shortName;
+@synthesize longName;
+@synthesize lastModifiedDate;
+@synthesize agencyId;
+
 @end

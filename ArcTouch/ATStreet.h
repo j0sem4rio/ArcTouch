@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface ATStreet : NSObject{
-    
+     NSInteger uniqueId;
+     NSString *shortName;
+     NSString *longName;
+     NSDate *lastModifiedDate;
+     NSInteger agencyId;
 }
 @property (nonatomic, assign) NSInteger uniqueId;
-@property (nonatomic, copy) NSString *shortName;
-@property (nonatomic, copy) NSString *longName;
-@property (nonatomic, copy) NSDate *lastModifiedDate;
+@property (nonatomic, readwrite) NSString *shortName;
+@property (nonatomic, readwrite) NSString *longName;
+@property (nonatomic, readwrite) NSDate *lastModifiedDate;
 @property (nonatomic, assign) NSInteger agencyId;
 
 @end

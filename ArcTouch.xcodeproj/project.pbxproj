@@ -15,6 +15,7 @@
 		BD6074841B6B9B3200345947 /* ArcTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6074831B6B9B3200345947 /* ArcTouchTests.m */; };
 		BD6074921B6BB55500345947 /* ATWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6074911B6BB55500345947 /* ATWebService.m */; };
 		BD6074961B6BBED400345947 /* ATStreet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6074951B6BBED400345947 /* ATStreet.m */; };
+		BDE42B491B6BE3490096F6CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B481B6BE3490096F6CD /* ViewController.xib */; };
 		CD616D755D326580D641ECFB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083069235F5924DE8990BEDD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		BD6074911B6BB55500345947 /* ATWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATWebService.m; sourceTree = "<group>"; };
 		BD6074941B6BBED400345947 /* ATStreet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATStreet.h; sourceTree = "<group>"; };
 		BD6074951B6BBED400345947 /* ATStreet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATStreet.m; sourceTree = "<group>"; };
+		BDE42B481B6BE3490096F6CD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
 		FB68E0620410BDF66153763B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				BD60746C1B6B9B3100345947 /* AppDelegate.m */,
 				BD60746E1B6B9B3100345947 /* ViewController.h */,
 				BD60746F1B6B9B3100345947 /* ViewController.m */,
+				BDE42B481B6BE3490096F6CD /* ViewController.xib */,
 				BD6074741B6B9B3100345947 /* Images.xcassets */,
 				BD6074761B6B9B3100345947 /* LaunchScreen.xib */,
 				BD6074671B6B9B3100345947 /* Supporting Files */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6074781B6B9B3100345947 /* LaunchScreen.xib in Resources */,
+				BDE42B491B6BE3490096F6CD /* ViewController.xib in Resources */,
 				BD6074751B6B9B3100345947 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

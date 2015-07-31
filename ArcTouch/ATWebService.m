@@ -7,8 +7,7 @@
 //
 
 #import "ATWebService.h"
-#import "AFHTTPClient.h"
-#import "AFJSONRequestOperation.h"
+
 
 @implementation ATWebService
 
@@ -32,12 +31,12 @@ static NSString * const APIBaseURL = @"https://api.appglu.com";
 
 
 
-- (void)RoutesByStop
+- (AFHTTPRequestOperation*)callWebService:(NSString*)path parameter:(NSDictionary*)dic
 {
     //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
 
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",APIBaseURL,ROUTE_BY_STOP]]];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",APIBaseURL,path]]];
     
     
     [httpClient clearAuthorizationHeader];
@@ -46,7 +45,7 @@ static NSString * const APIBaseURL = @"https://api.appglu.com";
     [httpClient setAuthorizationHeaderWithUsername:@"WKD4N7YMA1uiM8V" password:@"DtdTtzMLQlA0hk2C1Yi5pLyVIlAQ68"];
     
     
-    NSDictionary *dictionary =  @{ @"params" :  @{ @"stopName" : @"%lauro linhares%"}};
+    NSDictionary *dictionary =  @{ @"params" :  dic};
     
     [httpClient setDefaultHeader:@"content-type" value:@"application/json"];
     [httpClient setDefaultHeader:@"X-AppGlu-Environment" value:@"staging"];
@@ -62,17 +61,7 @@ static NSString * const APIBaseURL = @"https://api.appglu.com";
     [request setTimeoutInterval:2.0];
     
     
+    return operation;
     
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSString *html = [NSString stringWithFormat:@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
-        
-        NSLog(@"TorrentList %@", html);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    [operation start];
 }
 @end
