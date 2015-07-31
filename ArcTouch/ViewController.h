@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+    IBOutlet UITableView *tableViewStreet;
+    IBOutlet UISearchBar* search;
+}
+
+@property (nonatomic, retain) UITableView *tableViewStreet;
+@property (nonatomic, retain) NSArray* dataSource;
+@property (nonatomic, retain) UISearchBar* search;
+
 
 
 @end
