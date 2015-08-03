@@ -16,6 +16,15 @@
 		BD6074921B6BB55500345947 /* ATWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6074911B6BB55500345947 /* ATWebService.m */; };
 		BD6074961B6BBED400345947 /* ATStreet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6074951B6BBED400345947 /* ATStreet.m */; };
 		BDE42B491B6BE3490096F6CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B481B6BE3490096F6CD /* ViewController.xib */; };
+		BDE42B811B6F8B6C0096F6CD /* StreetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B801B6F8B6C0096F6CD /* StreetParser.m */; };
+		BDE42B841B6F905D0096F6CD /* StopRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B831B6F905D0096F6CD /* StopRouter.m */; };
+		BDE42B881B6F953C0096F6CD /* ATRouterStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B861B6F953C0096F6CD /* ATRouterStopViewController.m */; };
+		BDE42B891B6F953C0096F6CD /* ATRouterStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B871B6F953C0096F6CD /* ATRouterStopViewController.xib */; };
+		BDE42B8C1B6FA4FC0096F6CD /* StopRouterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B8B1B6FA4FC0096F6CD /* StopRouterParser.m */; };
+		BDE42B921B6FB1690096F6CD /* Departures.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B911B6FB1690096F6CD /* Departures.m */; };
+		BDE42B961B6FCAD70096F6CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B941B6FCAD70096F6CD /* TableViewController.m */; };
+		BDE42B971B6FCAD70096F6CD /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B951B6FCAD70096F6CD /* TableViewController.xib */; };
+		BDE42B9A1B6FD4A00096F6CD /* DeparturesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B991B6FD4A00096F6CD /* DeparturesParser.m */; };
 		CD616D755D326580D641ECFB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083069235F5924DE8990BEDD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +58,22 @@
 		BD6074941B6BBED400345947 /* ATStreet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATStreet.h; sourceTree = "<group>"; };
 		BD6074951B6BBED400345947 /* ATStreet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATStreet.m; sourceTree = "<group>"; };
 		BDE42B481B6BE3490096F6CD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
+		BDE42B7F1B6F8B6C0096F6CD /* StreetParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetParser.h; sourceTree = "<group>"; };
+		BDE42B801B6F8B6C0096F6CD /* StreetParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetParser.m; sourceTree = "<group>"; };
+		BDE42B821B6F905D0096F6CD /* StopRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopRouter.h; sourceTree = "<group>"; };
+		BDE42B831B6F905D0096F6CD /* StopRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopRouter.m; sourceTree = "<group>"; };
+		BDE42B851B6F953C0096F6CD /* ATRouterStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRouterStopViewController.h; sourceTree = "<group>"; };
+		BDE42B861B6F953C0096F6CD /* ATRouterStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRouterStopViewController.m; sourceTree = "<group>"; };
+		BDE42B871B6F953C0096F6CD /* ATRouterStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATRouterStopViewController.xib; sourceTree = "<group>"; };
+		BDE42B8A1B6FA4FC0096F6CD /* StopRouterParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopRouterParser.h; sourceTree = "<group>"; };
+		BDE42B8B1B6FA4FC0096F6CD /* StopRouterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopRouterParser.m; sourceTree = "<group>"; };
+		BDE42B901B6FB1690096F6CD /* Departures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Departures.h; sourceTree = "<group>"; };
+		BDE42B911B6FB1690096F6CD /* Departures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Departures.m; sourceTree = "<group>"; };
+		BDE42B931B6FCAD70096F6CD /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		BDE42B941B6FCAD70096F6CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		BDE42B951B6FCAD70096F6CD /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		BDE42B981B6FD4A00096F6CD /* DeparturesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeparturesParser.h; sourceTree = "<group>"; };
+		BDE42B991B6FD4A00096F6CD /* DeparturesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeparturesParser.m; sourceTree = "<group>"; };
 		FB68E0620410BDF66153763B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +127,7 @@
 		BD6074661B6B9B3100345947 /* ArcTouch */ = {
 			isa = PBXGroup;
 			children = (
+				BDE42B7E1B6F8A530096F6CD /* parser */,
 				BD6074931B6BBE3500345947 /* pojo */,
 				BD60748F1B6BB43000345947 /* Utility */,
 				BD60746B1B6B9B3100345947 /* AppDelegate.h */,
@@ -109,6 +135,12 @@
 				BD60746E1B6B9B3100345947 /* ViewController.h */,
 				BD60746F1B6B9B3100345947 /* ViewController.m */,
 				BDE42B481B6BE3490096F6CD /* ViewController.xib */,
+				BDE42B851B6F953C0096F6CD /* ATRouterStopViewController.h */,
+				BDE42B861B6F953C0096F6CD /* ATRouterStopViewController.m */,
+				BDE42B871B6F953C0096F6CD /* ATRouterStopViewController.xib */,
+				BDE42B931B6FCAD70096F6CD /* TableViewController.h */,
+				BDE42B941B6FCAD70096F6CD /* TableViewController.m */,
+				BDE42B951B6FCAD70096F6CD /* TableViewController.xib */,
 				BD6074741B6B9B3100345947 /* Images.xcassets */,
 				BD6074761B6B9B3100345947 /* LaunchScreen.xib */,
 				BD6074671B6B9B3100345947 /* Supporting Files */,
@@ -156,8 +188,25 @@
 			children = (
 				BD6074941B6BBED400345947 /* ATStreet.h */,
 				BD6074951B6BBED400345947 /* ATStreet.m */,
+				BDE42B821B6F905D0096F6CD /* StopRouter.h */,
+				BDE42B831B6F905D0096F6CD /* StopRouter.m */,
+				BDE42B901B6FB1690096F6CD /* Departures.h */,
+				BDE42B911B6FB1690096F6CD /* Departures.m */,
 			);
 			name = pojo;
+			sourceTree = "<group>";
+		};
+		BDE42B7E1B6F8A530096F6CD /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				BDE42B7F1B6F8B6C0096F6CD /* StreetParser.h */,
+				BDE42B801B6F8B6C0096F6CD /* StreetParser.m */,
+				BDE42B8A1B6FA4FC0096F6CD /* StopRouterParser.h */,
+				BDE42B8B1B6FA4FC0096F6CD /* StopRouterParser.m */,
+				BDE42B981B6FD4A00096F6CD /* DeparturesParser.h */,
+				BDE42B991B6FD4A00096F6CD /* DeparturesParser.m */,
+			);
+			name = parser;
 			sourceTree = "<group>";
 		};
 		FA84B6DDF3497587006E988D /* Pods */ = {
@@ -253,6 +302,8 @@
 			files = (
 				BD6074781B6B9B3100345947 /* LaunchScreen.xib in Resources */,
 				BDE42B491B6BE3490096F6CD /* ViewController.xib in Resources */,
+				BDE42B891B6F953C0096F6CD /* ATRouterStopViewController.xib in Resources */,
+				BDE42B971B6FCAD70096F6CD /* TableViewController.xib in Resources */,
 				BD6074751B6B9B3100345947 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,10 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE42B961B6FCAD70096F6CD /* TableViewController.m in Sources */,
+				BDE42B9A1B6FD4A00096F6CD /* DeparturesParser.m in Sources */,
+				BDE42B841B6F905D0096F6CD /* StopRouter.m in Sources */,
 				BD6074701B6B9B3100345947 /* ViewController.m in Sources */,
+				BDE42B881B6F953C0096F6CD /* ATRouterStopViewController.m in Sources */,
+				BDE42B811B6F8B6C0096F6CD /* StreetParser.m in Sources */,
 				BD6074921B6BB55500345947 /* ATWebService.m in Sources */,
 				BD6074961B6BBED400345947 /* ATStreet.m in Sources */,
+				BDE42B8C1B6FA4FC0096F6CD /* StopRouterParser.m in Sources */,
 				BD60746D1B6B9B3100345947 /* AppDelegate.m in Sources */,
+				BDE42B921B6FB1690096F6CD /* Departures.m in Sources */,
 				BD60746A1B6B9B3100345947 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

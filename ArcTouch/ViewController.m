@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "ATWebService.h"
+#import "StreetParser.h"
+
+
+#import "ATRouterStopViewController.h"
 
 
 @interface ViewController ()
@@ -28,7 +32,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+    self.navigationItem.titleView = search;
 }
 
 
@@ -62,48 +68,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // open a alert with an OK and cancel button
-    NSDictionary *dictionary =   @{ @"routeId" : @"22"};
-    
-    ATWebService *atw =[ATWebService sharedInstance];
-    AFHTTPRequestOperation *operation=   [atw callWebService:DEPARTURES_BY_ROUTE parameter:dictionary];
+   ATStreet *street = [self.dataSource objectAtIndex:indexPath.row];
     
     
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSString *json = [NSString stringWithFormat:@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
-        
-        NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
-        id jsonOBJ = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        ATStreet *street;
-        
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"];
-        
-        NSArray *streetArray = [jsonOBJ objectForKey:@"rows"];
-        NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:[streetArray count]];
-        for (NSDictionary* str in streetArray) {
-            street = [[ATStreet alloc] init];
-            street.agencyId = [[str valueForKey:@"agencyId"] integerValue];
-            street.uniqueId = [[str valueForKey:@"id"] integerValue];
-            
-            NSString* date =[str objectForKey:@"lastModifiedDate"] ;
-            street.lastModifiedDate = [dateFormat dateFromString:date];
-            
-            street.longName = [str objectForKey:@"longName"];
-            street.shortName = [str objectForKey:@"shortName"];
-            
-            [result addObject:street];
-        }
-        self.dataSource = result;
-        [tableViewStreet reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+    ATRouterStopViewController *vc2 = [[ATRouterStopViewController alloc] initWithNibName:@"ATRouterStopViewController" bundle:nil];
+    [vc2 findRouterByStop:street];
     
-    [operation start];}
+    [self.navigationController pushViewController:vc2 animated:YES];
+    
+    
+
+}
 #pragma mark - Search Implementation
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
@@ -138,30 +113,11 @@
         
         NSString *json = [NSString stringWithFormat:@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
         
-        NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
-        id jsonOBJ = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        StreetParser *sp = [[StreetParser alloc] init];
         
-        ATStreet *street;
         
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"];
+        self.dataSource = [sp parse:json];
         
-        NSArray *streetArray = [jsonOBJ objectForKey:@"rows"];
-        NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:[streetArray count]];
-        for (NSDictionary* str in streetArray) {
-            street = [[ATStreet alloc] init];
-            street.agencyId = [[str valueForKey:@"agencyId"] integerValue];
-            street.uniqueId = [[str valueForKey:@"id"] integerValue];
-            
-            NSString* date =[str objectForKey:@"lastModifiedDate"] ;
-            street.lastModifiedDate = [dateFormat dateFromString:date];
-            
-            street.longName = [str objectForKey:@"longName"];
-            street.shortName = [str objectForKey:@"shortName"];
-            
-            [result addObject:street];
-        }
-        self.dataSource = result;
         [tableViewStreet reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

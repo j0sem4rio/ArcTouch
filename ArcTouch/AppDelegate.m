@@ -22,9 +22,10 @@
     // create an instance of the view controller you want to be displayed first
     ViewController *firstViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     // set it as the root view controller of the application's window
-    [self.window setRootViewController:firstViewController];
-    
-    self.window.backgroundColor = [UIColor whiteColor];
+ 
+
+    UINavigationController *navigation = [[UINavigationController alloc]initWithRootViewController: firstViewController];
+    self.window.rootViewController = navigation;
     [self.window makeKeyAndVisible];
     return YES;
 }

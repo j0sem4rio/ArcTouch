@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B9AA801C-69F7-4E92-822D-B92CFE02D8C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ArcTouch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>777739BB36FF0219FE80E88735FE9ECCD8569B47</key>
+		<string>https://github.com/j0sem4rio/ArcTouch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ArcTouch.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>777739BB36FF0219FE80E88735FE9ECCD8569B47</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/j0sem4rio/ArcTouch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>777739BB36FF0219FE80E88735FE9ECCD8569B47</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>777739BB36FF0219FE80E88735FE9ECCD8569B47</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ArcTouch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

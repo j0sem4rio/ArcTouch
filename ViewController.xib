@@ -17,15 +17,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5k5-Hl-lTd">
-                    <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                    <rect key="frame" x="0.0" y="67" width="600" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="2Ed-VI-EQB"/>
                     </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eHE-kE-lCf">
-                    <rect key="frame" x="0.0" y="67" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="111" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="600" id="aZg-6M-jpf"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="hca-Pb-zhU"/>
                         <outlet property="delegate" destination="-1" id="Cqc-mZ-VnD"/>
@@ -34,13 +37,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="eHE-kE-lCf" firstAttribute="top" secondItem="5k5-Hl-lTd" secondAttribute="bottom" id="FFI-vG-uLa"/>
-                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M7g-eg-qbv"/>
-                <constraint firstAttribute="trailing" secondItem="5k5-Hl-lTd" secondAttribute="trailing" id="NQp-Gm-RaG"/>
-                <constraint firstItem="5k5-Hl-lTd" firstAttribute="trailing" secondItem="eHE-kE-lCf" secondAttribute="trailing" id="XXy-4q-3ND"/>
-                <constraint firstAttribute="bottom" secondItem="eHE-kE-lCf" secondAttribute="bottom" constant="-67" id="apZ-fa-7Zy"/>
-                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="eHE-kE-lCf" secondAttribute="leading" id="icH-hX-ThW"/>
-                <constraint firstItem="5k5-Hl-lTd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="jLu-iG-SLZ"/>
+                <constraint firstItem="eHE-kE-lCf" firstAttribute="top" secondItem="5k5-Hl-lTd" secondAttribute="bottom" id="OdE-Oa-PWC"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cwt-Ow-oky"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="67" id="eiz-hd-Slx"/>
+                <constraint firstItem="eHE-kE-lCf" firstAttribute="trailing" secondItem="5k5-Hl-lTd" secondAttribute="trailing" id="fF3-FO-FW9"/>
+                <constraint firstItem="5k5-Hl-lTd" firstAttribute="leading" secondItem="eHE-kE-lCf" secondAttribute="leading" id="pet-AL-v0c"/>
+                <constraint firstAttribute="trailing" secondItem="5k5-Hl-lTd" secondAttribute="trailing" id="zLP-P9-nmN"/>
             </constraints>
         </view>
     </objects>
