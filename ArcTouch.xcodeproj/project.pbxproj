@@ -25,6 +25,8 @@
 		BDE42B961B6FCAD70096F6CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B941B6FCAD70096F6CD /* TableViewController.m */; };
 		BDE42B971B6FCAD70096F6CD /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B951B6FCAD70096F6CD /* TableViewController.xib */; };
 		BDE42B9A1B6FD4A00096F6CD /* DeparturesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B991B6FD4A00096F6CD /* DeparturesParser.m */; };
+		BDE42B9E1B6FDACC0096F6CD /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDE42B9B1B6FDACC0096F6CD /* ProgressHUD.bundle */; };
+		BDE42B9F1B6FDACC0096F6CD /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE42B9D1B6FDACC0096F6CD /* ProgressHUD.m */; };
 		CD616D755D326580D641ECFB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083069235F5924DE8990BEDD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,9 @@
 		BDE42B951B6FCAD70096F6CD /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		BDE42B981B6FD4A00096F6CD /* DeparturesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeparturesParser.h; sourceTree = "<group>"; };
 		BDE42B991B6FD4A00096F6CD /* DeparturesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeparturesParser.m; sourceTree = "<group>"; };
+		BDE42B9B1B6FDACC0096F6CD /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		BDE42B9C1B6FDACC0096F6CD /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		BDE42B9D1B6FDACC0096F6CD /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		FB68E0620410BDF66153763B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +182,9 @@
 		BD60748F1B6BB43000345947 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				BDE42B9B1B6FDACC0096F6CD /* ProgressHUD.bundle */,
+				BDE42B9C1B6FDACC0096F6CD /* ProgressHUD.h */,
+				BDE42B9D1B6FDACC0096F6CD /* ProgressHUD.m */,
 				BD6074901B6BB55500345947 /* ATWebService.h */,
 				BD6074911B6BB55500345947 /* ATWebService.m */,
 			);
@@ -302,6 +310,7 @@
 			files = (
 				BD6074781B6B9B3100345947 /* LaunchScreen.xib in Resources */,
 				BDE42B491B6BE3490096F6CD /* ViewController.xib in Resources */,
+				BDE42B9E1B6FDACC0096F6CD /* ProgressHUD.bundle in Resources */,
 				BDE42B891B6F953C0096F6CD /* ATRouterStopViewController.xib in Resources */,
 				BDE42B971B6FCAD70096F6CD /* TableViewController.xib in Resources */,
 				BD6074751B6B9B3100345947 /* Images.xcassets in Resources */,
@@ -356,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE42B961B6FCAD70096F6CD /* TableViewController.m in Sources */,
+				BDE42B9F1B6FDACC0096F6CD /* ProgressHUD.m in Sources */,
 				BDE42B9A1B6FD4A00096F6CD /* DeparturesParser.m in Sources */,
 				BDE42B841B6F905D0096F6CD /* StopRouter.m in Sources */,
 				BD6074701B6B9B3100345947 /* ViewController.m in Sources */,

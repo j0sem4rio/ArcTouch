@@ -10,6 +10,7 @@
 #import "ATWebService.h"
 #import "Departures.h"
 #import "DeparturesParser.h"
+#import "ProgressHUD.h"
 
 @interface TableViewController ()
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [ProgressHUD show:@"Please wait..."];
     [self findDepartures];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -46,10 +48,12 @@
 
         self.departuresArray = [srp parse:json];;
         [self.tableView reloadData];
+        [ProgressHUD dismiss];
 
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        [ProgressHUD dismiss];
     }];
     
     [operation start];

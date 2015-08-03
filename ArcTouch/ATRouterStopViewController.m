@@ -30,6 +30,7 @@
                                                             action:@selector(departuresClicked:)];
     
     self.navigationItem.rightBarButtonItem = item;
+    [ProgressHUD show:@"Please wait..."];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,9 +55,11 @@
         
         self.dataSource = [srp parse:json];
         [tableViewStreet reloadData];
+        [ProgressHUD dismiss];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        [ProgressHUD dismiss];
     }];
     
     [operation start];

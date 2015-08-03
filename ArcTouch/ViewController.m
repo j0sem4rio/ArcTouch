@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ATWebService.h"
 #import "StreetParser.h"
-
+#import "ProgressHUD.h"
 
 #import "ATRouterStopViewController.h"
 
@@ -90,11 +90,11 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"Cancel clicked");
+
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"Search Clicked");
+    [ProgressHUD show:@"Please wait..."];
     [self searchTableList];
 }
 
@@ -119,9 +119,11 @@
         self.dataSource = [sp parse:json];
         
         [tableViewStreet reloadData];
+        [ProgressHUD dismiss];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        [ProgressHUD dismiss];
     }];
     
     [operation start];

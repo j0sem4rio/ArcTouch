@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ATStreet.h"
+#import "ProgressHUD.h"
 
 @interface ATRouterStopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     IBOutlet UITableView *tableViewStreet;
